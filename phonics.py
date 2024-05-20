@@ -94,7 +94,3 @@ phonics = pro_generator(word_number, Ci_order, V_order, C_order)
 print("word list: \n\n", phonics.generate_phonics())
 
 
-#1. 自行輸入頭子音、母音: by 5/10 
-# mltk: django/LineBot/
-# UI: by 5/10
-# 架構先出來[p1][by the end of 4/29]
