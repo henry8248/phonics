@@ -1,7 +1,6 @@
 import random as r
 import pandas as pd
 # import numpy as np
-import tkinter as tk
 
 Cis = [           ['b', 'p', 'm', 'f', 'd', 't', 'n', 'l'],
                   ['g', 'k', 'h', 'm', 'n', 's', 'r'],
@@ -59,38 +58,39 @@ class pro_generator():
                                else  self.generate_Ci() + self.generate_V()[1] + self.generate_C() + self.generate_V()[3] for _ in range(self.word_number)]
             return pd.Series(data=words_generated, index=range(1, self.word_number + 1))
 
-print("------------------Set number of phonics------------------------------")
+# print("------------------Set number of phonics------------------------------")
 
-word_number = int(input("Number of phonics (>0): "))
+# word_number = int(input("Number of phonics (>0): "))
 
 
-print("--------------------Customization settings----------------------")
+# print("--------------------Customization settings----------------------")
 
-Ci_cost_on = input("Customization for Ci? (yes/no): ")
+# Ci_cost_on = input("Customization for Ci? (yes/no): ")
 
-if Ci_cost_on == "yes":
-      Cis.append(list(map(lambda p: p.strip(), input("Enter customized Ci's (Separated by ','): ").split(","))))
-      Ci_order = len(Cis)
-else:
-      Ci_order = int(input("Select from Ci1~Ci6: "))
+# if Ci_cost_on == "yes":
+#       Cis.append(list(map(lambda p: p.strip(), input("Enter customized Ci's (Separated by ','): ").split(","))))
+#       Ci_order = len(Cis)
+# else:
+#       Ci_order = int(input("Select from Ci1~Ci6:(enter a number) "))
 
-V_cost_on = input("Customization for V? (yes/no): ")
-if V_cost_on == "yes":
-      Vs_cos = list(map(lambda p: p.strip(), input("Enter customized V's (Separated by ','): ").split(",")))
-      Vs.append(Vs_cos)
-      V_order = len(Vs)
+# V_cost_on = input("Customization for V? (yes/no): ")
+# if V_cost_on == "yes":
+#       Vs_cos = list(map(lambda p: p.strip(), input("Enter customized V's (Separated by ','): ").split(",")))
+#       Vs.append(Vs_cos)
+#       V_order = len(Vs)
      
-else: 
-      V_order = int(input("Select from V1~V5: "))
+# else: 
+#       V_order = int(input("Select from V1~V5: (enter a number)"))
 
-C_cost_on = input("Customization for C? (yes/no):")
-if C_cost_on == "yes":
-      Cs.append(list(map(lambda p: p.strip(), input("Enter customized C's (Separated by ','): ").split(","))))
-      C_order = len(Cs)
-else:
-      C_order = int(input("Select from C1~C9: "))
+# C_cost_on = input("Customization for C? (yes/no):")
+# if C_cost_on == "yes":
+#       Cs.append(list(map(lambda p: p.strip(), input("Enter customized C's (Separated by ','): ").split(","))))
+#       C_order = len(Cs)
+# else:
+#       C_order = int(input("Select from C1~C9: (enter a number)"))
 
-phonics = pro_generator(word_number, Ci_order, V_order, C_order)
-print("word list: \n\n", phonics.generate_phonics())
+# phonics = pro_generator(word_number, Ci_order, V_order, C_order)
+# print("word list: \n\n", phonics.generate_phonics())
 
+# [5/22] Finish UI
 
